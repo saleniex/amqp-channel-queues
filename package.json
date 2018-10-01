@@ -1,0 +1,31 @@
+{
+  "name": "amqp-channel-queues",
+  "version": "1.0.0",
+
+  "author": "Uldis Jansons <uj@mobilly.lv>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saleniex/amqp-channel-queues.git"
+  },
+  "main": "dist/index.js",
+  "description": "AMQP wrapper with promises",
+  "engineStrict": true,
+  "license": "0BSD",
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.release.json"
+  },
+  "devDependencies": {
+    "@types/node": "~8.10.25",
+    "ts-loader": "^3.5.0",
+    "tsutils": "~3.0.0",
+    "typescript": "~3.0.1"
+  },
+  "keywords": [
+    "amqp",
+    "rabbitmq",
+    "queue"
+  ]
+}

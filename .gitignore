@@ -1,0 +1,18 @@
+# Logs
+yarn-error.log
+
+# Dependencies
+node_modules/
+
+# Transpiled files
+dist/
+build/
+
+# JetBrains IDEs
+.idea
+
+# Optional npm cache directory
+.npm
+
+# Use only Yarn package manager
+package-lock.json
