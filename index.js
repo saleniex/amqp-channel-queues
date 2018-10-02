@@ -1,15 +1,7 @@
 'use strict';
 
-var channelQueue = require('./dist/AmqpChannelQueue');
-var conenciton = require('./dist/AmqpConnection');
-var correlationIdFactory = require('./dist/CorrelationIdFactory');
+module.exports.AmqpChannelQueue = require('./dist/AmqpChannelQueue');
+module.exports.AmqpConnection = require('./dist/AmqpConnection');
+module.exports.CorrelationIdFactory = require('./dist/CorrelationIdFactory');
 
-var acq = {
-    AmqpChannelQueue: channelQueue,
-    AmqpConnection: conenciton,
-    CorrelationIdFactory: correlationIdFactory,
-};
-
-module.exports = acq;
-module.exports.default = acq;
 
