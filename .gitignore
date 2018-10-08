@@ -12,3 +12,8 @@ node_modules/
 
 # Use only Yarn package manager
 package-lock.json
+
+index.d.ts
+index.js*
+src/*.d.ts
+src/*.js*
