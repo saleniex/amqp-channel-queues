@@ -15,6 +15,6 @@ package-lock.json
 
 index.d.ts
 index.js*
-src/*.d.ts
-src/*.js*
+lib/*.d.ts
+lib/*.js*
 dist/
