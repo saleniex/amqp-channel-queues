@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/saleniex/amqp-channel-queues.git"
   },
-  "main": "./src/index.js",
+  "main": "./index.ts",
   "description": "AMQP wrapper with promises",
   "engineStrict": true,
   "license": "0BSD",
