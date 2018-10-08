@@ -5,7 +5,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "allowJs": true,
+    "allowJs": false,
+    "declaration": true,
     "importHelpers": true,
     "alwaysStrict": true,
     "sourceMap": true,
@@ -17,6 +18,8 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "strictNullChecks": false,
+    "strict": true,
+    "outDir": "./dist",
     "lib": [
       "es5",
       "es6",
@@ -34,6 +37,7 @@
     ]
   },
   "include": [
+    "index.ts",
     "src/**/*",
     "__tests__/**/*"
   ]
