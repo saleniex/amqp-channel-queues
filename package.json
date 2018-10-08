@@ -27,5 +27,8 @@
     "amqp",
     "rabbitmq",
     "queue"
-  ]
+  ],
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  }
 }
