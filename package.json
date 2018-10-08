@@ -1,6 +1,6 @@
 {
   "name": "amqp-channel-queues",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Uldis Jansons <uj@mobilly.lv>",
   "repository": {
     "type": "git",
