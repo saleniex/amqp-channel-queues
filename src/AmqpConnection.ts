@@ -10,7 +10,7 @@ export default class AmqpConnection {
 
 
     public connect(): Promise<void> {
-        return new Promise<void>((resolve, reject) => {
+        return new Promise<void>((resolve: any, reject: any) => {
             const amqp = require('amqplib/callback_api');
             amqp.connect(this._endpoint, (err: any, conn: any) => {
                 if (err) {
