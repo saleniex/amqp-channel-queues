@@ -6,7 +6,8 @@
     "type": "git",
     "url": "https://github.com/saleniex/amqp-channel-queues.git"
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "description": "AMQP wrapper with promises",
   "engineStrict": true,
   "license": "0BSD",
@@ -14,10 +15,11 @@
     "node": ">= 8.9.0"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.release.json"
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "~8.10.25",
+    "create-ts-index": "^1.0.14",
     "ts-loader": "^3.5.0",
     "tsutils": "~3.0.0",
     "typescript": "~3.0.1"
