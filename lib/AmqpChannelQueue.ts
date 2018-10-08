@@ -1,6 +1,6 @@
-import CorrelationIdFactory from './CorrelationIdFactory';
+import {CorrelationIdFactory} from './CorrelationIdFactory';
 
-export default class AmqpChannelQueue {
+export class AmqpChannelQueue {
     private readonly _connection: any;
     private readonly _queueName: String;
     private _channel: any;

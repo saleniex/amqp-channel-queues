@@ -1,6 +1,6 @@
 import * as crypto from "crypto";
 
-export default class CorrelationIdFactory {
+export class CorrelationIdFactory {
     public create(): String {
         return crypto.randomBytes(32).toString("hex");
     }

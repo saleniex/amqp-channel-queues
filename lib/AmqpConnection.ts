@@ -1,6 +1,6 @@
-import AmqpChannelQueue from './AmqpChannelQueue';
+import {AmqpChannelQueue} from './AmqpChannelQueue';
 
-export default class AmqpConnection {
+export class AmqpConnection {
     private readonly _endpoint: string;
     private _connection: any;
 
