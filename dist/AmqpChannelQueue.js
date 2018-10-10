@@ -103,6 +103,12 @@ class AmqpChannelQueue {
             });
         });
     }
+    channelPrefetch(i) {
+        if (!this._channel) {
+            throw new Error('Cannot set channel prefetch. Create channel first.');
+        }
+        this._channel.prefetch(i);
+    }
 }
 exports.AmqpChannelQueue = AmqpChannelQueue;
 //# sourceMappingURL=AmqpChannelQueue.js.map

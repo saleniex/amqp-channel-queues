@@ -14,4 +14,5 @@ export declare class AmqpChannelQueue {
     ack(message: any): Promise<void>;
     private createQueueChannel;
     private createExclusiveAnonymousQueueChannel;
+    channelPrefetch(i: number): void;
 }
