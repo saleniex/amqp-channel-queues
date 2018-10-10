@@ -4,6 +4,7 @@ export class AmqpChannelQueue {
     private readonly _connection: any;
     private readonly _queueName: String;
     private _channel: any;
+    public channelPrefetch: number = 0;
 
     constructor(connection: any, queueName: String) {
         this._connection = connection;
@@ -13,6 +14,9 @@ export class AmqpChannelQueue {
     public async getOrCreateChannel(): Promise<any> {
         if ( ! this._channel) {
             this._channel = await this.createQueueChannel();
+            if (this.channelPrefetch > 0) {
+                this._channel.prefetch(this.channelPrefetch);
+            }
         }
 
         return this._channel;
@@ -121,12 +125,5 @@ export class AmqpChannelQueue {
                 });
             });
         });
-    }
-
-    public channelPrefetch(i: number): void {
-        if ( ! this._channel) {
-            throw new Error('Cannot set channel prefetch. Create channel first.');
-        }
-        this._channel.prefetch(i);
     }
 }
