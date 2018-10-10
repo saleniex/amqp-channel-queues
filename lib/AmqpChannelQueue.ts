@@ -122,4 +122,11 @@ export class AmqpChannelQueue {
             });
         });
     }
+
+    public channelPrefetch(i: number): void {
+        if ( ! this._channel) {
+            throw new Error('Cannot set channel prefetch. Create channel first.');
+        }
+        this._channel.prefetch(i);
+    }
 }
