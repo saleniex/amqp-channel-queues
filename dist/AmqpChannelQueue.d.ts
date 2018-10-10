@@ -3,6 +3,7 @@ export declare class AmqpChannelQueue {
     private readonly _connection;
     private readonly _queueName;
     private _channel;
+    channelPrefetch: number;
     constructor(connection: any, queueName: String);
     getOrCreateChannel(): Promise<any>;
     getOrCreateAnonymousExclusiveChannel(): Promise<any>;
@@ -14,5 +15,4 @@ export declare class AmqpChannelQueue {
     ack(message: any): Promise<void>;
     private createQueueChannel;
     private createExclusiveAnonymousQueueChannel;
-    channelPrefetch(i: number): void;
 }

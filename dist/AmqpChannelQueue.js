@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 class AmqpChannelQueue {
     constructor(connection, queueName) {
+        this.channelPrefetch = 0;
         this._connection = connection;
         this._queueName = queueName;
     }
@@ -10,6 +11,9 @@ class AmqpChannelQueue {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (!this._channel) {
                 this._channel = yield this.createQueueChannel();
+                if (this.channelPrefetch > 0) {
+                    this._channel.prefetch(this.channelPrefetch);
+                }
             }
             return this._channel;
         });
@@ -102,12 +106,6 @@ class AmqpChannelQueue {
                 });
             });
         });
-    }
-    channelPrefetch(i) {
-        if (!this._channel) {
-            throw new Error('Cannot set channel prefetch. Create channel first.');
-        }
-        this._channel.prefetch(i);
     }
 }
 exports.AmqpChannelQueue = AmqpChannelQueue;
