@@ -17,6 +17,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.5.9",
     "@types/node": "~8.10.25",
     "create-ts-index": "^1.0.14",
     "ts-loader": "^3.5.0",

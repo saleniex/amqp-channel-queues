@@ -2,6 +2,24 @@
 # yarn lockfile v1
 
 
+"@types/amqplib@^0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@types/amqplib/-/amqplib-0.5.9.tgz#94fa80fad2fdbe78f458ccb9c5fb0abfe62f817c"
+  integrity sha512-V4OFDKeu8rY2DnbHAh7J7DaJ8L8LZ7EyOLBoXsN2rtlCoB2QwaTgx2SsBd22mPUC9kl+vK7D+nfLq34jLhEjlA==
+  dependencies:
+    "@types/bluebird" "*"
+    "@types/node" "*"
+
+"@types/bluebird@*":
+  version "3.5.24"
+  resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.24.tgz#11f76812531c14f793b8ecbf1de96f672905de8a"
+  integrity sha512-YeQoDpq4Lm8ppSBqAnAeF/xy1cYp/dMTif2JFcvmAbETMRlvKHT2iLcWu+WyYiJO3b3Ivokwo7EQca/xfLVJmg==
+
+"@types/node@*":
+  version "10.12.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.5.tgz#7e7ea1a9b34d2c8d704cb0b755dffbcda34741ad"
+  integrity sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
+
 "@types/node@~8.10.25":
   version "8.10.30"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.30.tgz#2c82cbed5f79d72280c131d2acffa88fbd8dd353"
