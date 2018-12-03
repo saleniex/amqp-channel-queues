@@ -1,8 +1,8 @@
-import {AmqpConnection} from '../lib/AmqpConnection';
 import RpcChannelQueue from '../lib/RpcChannelQueue';
 import {CorrelationIdFactory} from '../lib/CorrelationIdFactory';
+import Connection from '../lib/Connection';
 
-const con  = new AmqpConnection('amqp://localhost');
+const con  = new Connection('amqp://localhost');
 con.connect()
     .then(() => {
         const rpcQueue = new RpcChannelQueue(con, 'test.rpc', new CorrelationIdFactory());

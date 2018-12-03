@@ -1,8 +1,8 @@
 import ChannelQueue from './ChannelQueue';
-import {AmqpConnection} from './AmqpConnection';
+import Connection from './Connection';
 
 export default class WorkChannelQueue extends ChannelQueue {
-    constructor(connection: AmqpConnection, queueName: string) {
+    constructor(connection: Connection, queueName: string) {
         super(connection, queueName);
     }
 

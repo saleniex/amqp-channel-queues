@@ -1,10 +1,10 @@
 import ChannelQueue from './ChannelQueue';
-import {AmqpConnection} from './AmqpConnection';
+import Connection from './Connection';
 
 export default class ConsumerChannelQueue extends ChannelQueue {
 
 
-    constructor(connection: AmqpConnection, queueName: string) {
+    constructor(connection: Connection, queueName: string) {
         super(connection, queueName);
     }
 

@@ -1,11 +1,11 @@
-import {AmqpConnection} from './AmqpConnection';
+import Connection from './Connection';
 
 export default abstract class ChannelQueue {
-    protected _connection: AmqpConnection;
+    protected _connection: Connection;
     protected _queueName: string;
     protected _channel: any = null;
 
-    protected constructor(connection: AmqpConnection, queueName: string) {
+    protected constructor(connection: Connection, queueName: string) {
         this._connection = connection;
         this._queueName = queueName;
     }

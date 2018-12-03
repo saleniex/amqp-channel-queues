@@ -1,7 +1,7 @@
 import ConsumerChannelQueue from '../lib/ConsumerChannelQueue';
-import {AmqpConnection} from '../lib/AmqpConnection';
+import Connection from '../lib/Connection';
 
-const con  = new AmqpConnection('amqp://localhost');
+const con  = new Connection('amqp://localhost');
 con.connect()
     .then(() => {
         const consumeQueue = new ConsumerChannelQueue(con, 'test.rpc');

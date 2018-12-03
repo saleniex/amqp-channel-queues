@@ -1,6 +1,6 @@
 import ChannelQueue from './ChannelQueue';
-import {AmqpConnection} from './AmqpConnection';
 import {CorrelationIdFactory} from './CorrelationIdFactory';
+import Connection from './Connection';
 
 export default class RpcChannelQueue extends ChannelQueue {
     protected _replyQueueName: string;
@@ -8,7 +8,7 @@ export default class RpcChannelQueue extends ChannelQueue {
     private _requestCallbacks: object = {};
 
 
-    constructor(connection: AmqpConnection, queueName: string, correlationIdFactory: CorrelationIdFactory) {
+    constructor(connection: Connection, queueName: string, correlationIdFactory: CorrelationIdFactory) {
         super(connection, queueName);
         this._correlationIdFactory = correlationIdFactory;
     }
