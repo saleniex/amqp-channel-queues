@@ -10,10 +10,10 @@ class AmqpConnection {
             const amqp = require('amqplib/callback_api');
             amqp.connect(this._endpoint, (err, conn) => {
                 if (err) {
-                    return reject();
+                    return reject(err);
                 }
                 this._connection = conn;
-                resolve();
+                resolve(conn);
             });
         });
     }
